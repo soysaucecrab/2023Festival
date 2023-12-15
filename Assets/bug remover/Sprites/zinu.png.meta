@@ -123,7 +123,70 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: zinu_init
+      name: zinu_init1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c2484c20c6692d4f99d28b6c96570e3
+      internalID: -1650805732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zinu_init2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96228c4dbfe02a4eabe66883e76a84c
+      internalID: 2143877876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zinu_spell1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20b80523ae013d4c9862dd00c0e07b5
+      internalID: -1704544483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zinu_spell2
       rect:
         serializedVersion: 2
         x: 0
@@ -131,20 +194,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f84f57f510c68f74bb1fa9f031d16e40
-      internalID: -1871652994
+      spriteID: f1e90f99e9e79a24d8b94aa84043a64e
+      internalID: -1723545392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zinu_spell
+      name: zinu_stand1
       rect:
         serializedVersion: 2
         x: 32
@@ -152,56 +215,35 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e4bc4ce6329a71418e420070a5c70ea
-      internalID: 79705730
+      spriteID: 17e3bcbc8d1179b45a948ffddd116fbb
+      internalID: -392543383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zinu_normal
+      name: zinu_stand2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
+        x: 64
+        y: 64
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 207913276b19ed449b47baf82baadb59
-      internalID: 1081054835
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zinu_stand
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef05097ea6d8d454cb1515f304be1775
-      internalID: 2032271200
+      spriteID: 231cb7dde06a187468d14c7ce3fbda29
+      internalID: 1219785140
       vertices: []
       indices: 
       edges: []
@@ -211,18 +253,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 32
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6eecaf17a7c895848a75f1ec756f5e5c
-      internalID: 1023250987
+      spriteID: 551eacb6a76aca8498943ab00cd2c878
+      internalID: -280823122
       vertices: []
       indices: 
       edges: []
@@ -232,18 +274,102 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 0
+        y: 32
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0695fce72072af749931367ef4d23baf
-      internalID: -771348920
+      spriteID: 41b866b92c3d0734f845ec5b74f2e322
+      internalID: -1811583158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zinu_walk3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 721af440d75725d408133054cace9999
+      internalID: 1547493338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zinu_walk4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b53c7e43662c4d44a97a8b067f4e41ad
+      internalID: -1447214268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zinu_dead1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a5cb1554f6149347b5b8f655510a36b
+      internalID: -1348719080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zinu_dead2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4329eaa9f22b3eb4085ed9fd02dcfa1d
+      internalID: 1264641123
       vertices: []
       indices: 
       edges: []
@@ -259,12 +385,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      zinu_init: -1871652994
-      zinu_normal: 1081054835
-      zinu_spell: 79705730
-      zinu_stand: 2032271200
-      zinu_walk1: 1023250987
-      zinu_walk2: -771348920
+      zinu_dead1: -1348719080
+      zinu_dead2: 1264641123
+      zinu_init1: -1650805732
+      zinu_init2: 2143877876
+      zinu_spell1: -1704544483
+      zinu_spell2: -1723545392
+      zinu_stand1: -392543383
+      zinu_stand2: 1219785140
+      zinu_walk1: -280823122
+      zinu_walk2: -1811583158
+      zinu_walk3: 1547493338
+      zinu_walk4: -1447214268
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
