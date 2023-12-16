@@ -6,6 +6,8 @@ using static Cinemachine.DocumentationSortingAttribute;
 public class Spawner : MonoBehaviour
 {
     public Transform[] spawnPoint;
+    public SpawnData[] spawnData;
+
     float timer;
     int level;
 
@@ -16,9 +18,9 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        level = Mathf.FloorToInt(GameManager.instance.gameTime / 10f);
+        level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / 10f), spawnData.Length-1);
 
-        if (timer > (level == 0 ? 0.5f : 0.2f))
+        if (timer > spawnData[level].spawnTime)
         {
             timer = 0;
             Spawn();
@@ -27,7 +29,19 @@ public class Spawner : MonoBehaviour
 
     void Spawn()
     {
-        GameObject enemy = GameManager.instance.pool.Get(Random.Range(0,level+1)); //range는 enemy 개수임
+        GameObject enemy = GameManager.instance.pool.Get(0); //range는 enemy 개수임
         enemy.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
+        enemy.GetComponent<Enemy>().Init(spawnData[level]);
     }
+}
+
+[System.Serializable] //속성화
+public class SpawnData
+{
+    public float spawnTime;
+
+    public int spriteType;
+    public int health;
+    public float speed;
+
 }
