@@ -22,10 +22,22 @@ public class Bullet : MonoBehaviour
         this.per = per;
         this.dir = dir;
 
-        Debug.Log(dir);
         if(per > -1)
         {
             rigid.velocity = dir * fast;
+        }
+    }
+
+    void Update()
+    {
+        Vector3 myPos = transform.position;
+        Vector3 targetPos = GameManager.instance.player.transform.position;
+        float curDiff = Vector3.Distance(myPos, targetPos);
+        if (curDiff > 100)
+        {
+            Debug.Log("Deleted!");
+            rigid.velocity = Vector2.zero;
+            gameObject.SetActive(false);
         }
     }
 
@@ -36,7 +48,7 @@ public class Bullet : MonoBehaviour
             return;
         }
         per--;
-        speed = speed * 0.7f;
+        speed = speed * 0.9f;
         rigid.velocity = dir * speed;
         if (per < 0) {
             rigid.velocity = Vector2.zero;
