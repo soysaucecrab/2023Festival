@@ -28,14 +28,13 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    void Update()
+    void Update() //ÃÑ¾Ë ºø³ª°¨ ¹æÁö
     {
         Vector3 myPos = transform.position;
         Vector3 targetPos = GameManager.instance.player.transform.position;
         float curDiff = Vector3.Distance(myPos, targetPos);
         if (curDiff > 100)
         {
-            Debug.Log("Deleted!");
             rigid.velocity = Vector2.zero;
             gameObject.SetActive(false);
         }
