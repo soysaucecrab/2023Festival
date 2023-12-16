@@ -33,7 +33,6 @@ public class Weapon : MonoBehaviour
             default:
                 timer += Time.deltaTime;
                 speed = 0.5f;
-                Debug.Log(player.scanner.nearestTarget);
                 if (timer > speed)
                 {
                     timer = 0f;

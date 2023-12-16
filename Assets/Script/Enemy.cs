@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public float health;
     public float maxHealth;
     public Rigidbody2D target;
+    bool hit;
 
     bool isLive;
 
@@ -27,9 +28,10 @@ public class Enemy : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!isLive)
+        if (!isLive || anim.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
+        {
             return;
-
+        }
         Vector2 dirVec = target.position - rigid.position;
         Vector2 nextVec = dirVec.normalized * speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + nextVec);
@@ -81,8 +83,7 @@ public class Enemy : MonoBehaviour
         yield return wait; //다음 하나의 물리 프레임까지 기다림
         Vector3 playerPos = GameManager.instance.player.transform.position;
         Vector3 dirVec = transform.position - playerPos;
-        rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse);
-
+        rigid.AddForce(dirVec.normalized * 1, ForceMode2D.Impulse);
     }
 
     void Dead()
