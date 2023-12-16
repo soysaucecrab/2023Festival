@@ -28,11 +28,11 @@ public class HUD : MonoBehaviour
                 break;
 
             case InfoType.Level:
-
+                myText.text = string.Format("Lv.{0:F0}",GameManager.instance.level); //{index : format}
                 break;
 
             case InfoType.Kill:
-
+                myText.text = string.Format("{0:F0}", GameManager.instance.kill); //{index : format}
                 break;
 
             case InfoType.Time:
