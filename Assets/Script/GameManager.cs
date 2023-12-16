@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [Header("#Player Information")]
+    public int health;
+    public int maxHealth;
     public int level;
     public int kill;
     public int exp;
