@@ -8,11 +8,19 @@ public class Weapon : MonoBehaviour
     public int prefabId;
     public float damage;
     public int count; //set n
-    public int speed; //rotation
+    public float speed; //rotation
+
+    float timer;
+    Player player;
 
     void Start()
     {
         Init();
+    }
+
+    void Awake()
+    {
+        player = GetComponentInParent<Player>();
     }
 
     void Update()
@@ -22,8 +30,16 @@ public class Weapon : MonoBehaviour
             case 0:
                 transform.Rotate(Vector3.back * speed * Time.deltaTime); //clock
                 break;
-
-            default: break;
+            default:
+                timer += Time.deltaTime;
+                speed = 0.5f;
+                Debug.Log(player.scanner.nearestTarget);
+                if (timer > speed)
+                {
+                    timer = 0f;
+                    Fire();
+                }
+                break;
         }
 
         if (Input.GetButtonDown("Jump"))
@@ -45,14 +61,16 @@ public class Weapon : MonoBehaviour
 
     public void Init()
     {
-        switch(id)
+        switch (id)
         {
+            
             case 0:
                 speed = 150;
                 Batch();
                 break;
-
-            default: break;
+            default:
+                speed = 0.5f;
+                break;
         }
     }
 
@@ -80,9 +98,23 @@ public class Weapon : MonoBehaviour
             bullet.Rotate(rotVec);
             bullet.Translate(bullet.up * 1.1f, Space.World);
 
-            bullet.GetComponent<Bullet>().Init(damage, -1); //infinity per ; sword
+            bullet.GetComponent<Bullet>().Init(damage, -1, Vector3.zero); //infinity per ; sword
         }
     }
 
-   
+   void Fire()
+    {
+        if(!player.scanner.nearestTarget) {
+            return;
+        }
+        
+        Vector3 targetPos = player.scanner.nearestTarget.position;
+        Vector3 dir = targetPos - transform.position;
+        dir = dir.normalized;
+
+        Transform bullet = GameManager.instance.pool.Get(prefabId).transform;   
+        bullet.position = transform.position;
+        bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir);
+        bullet.GetComponent<Bullet>().Init(damage, count, dir);
+    }
 }
