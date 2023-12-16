@@ -1,27 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
     public float damage;
     public int per;
-
+    public float fast;
+    float speed;
+    Vector3 dir;
     Rigidbody2D rigid;
-
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
+        speed = fast;
     }
-
     public void Init(float damage, int per, Vector3 dir)
     {
         this.damage = damage;
         this.per = per;
+        this.dir = dir;
 
+        Debug.Log(dir);
         if(per > -1)
         {
-            rigid.velocity = dir;
+            rigid.velocity = dir * fast;
         }
     }
 
@@ -32,8 +36,9 @@ public class Bullet : MonoBehaviour
             return;
         }
         per--;
-
-        if(per < 0) {
+        speed = speed * 0.7f;
+        rigid.velocity = dir * speed;
+        if (per < 0) {
             rigid.velocity = Vector2.zero;
             gameObject.SetActive(false);
         }

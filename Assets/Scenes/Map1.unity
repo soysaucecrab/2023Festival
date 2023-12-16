@@ -18098,7 +18098,7 @@ MonoBehaviour:
   prefabId: 2
   damage: 3
   count: 0
-  speed: 0
+  speed: 0.5
 --- !u!1 &1092108698
 GameObject:
   m_ObjectHideFlags: 0
@@ -18769,7 +18769,7 @@ GameObject:
   - component: {fileID: 1903068309}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18988,7 +18988,7 @@ MonoBehaviour:
   scanRange: 5
   targetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   nearestTarget: {fileID: 0}
 --- !u!1 &1929731110
 GameObject:
