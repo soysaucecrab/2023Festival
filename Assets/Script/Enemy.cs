@@ -86,7 +86,7 @@ public class Enemy : MonoBehaviour
             spriter.sortingOrder = 1;
             anim.SetBool("Dead", true);
             GameManager.instance.kill++;
-            GameManager.instance.GetExp();
+            
         }
     }
 
@@ -101,5 +101,9 @@ public class Enemy : MonoBehaviour
     void Dead()
     {
         gameObject.SetActive(false);
+    }
+    void DeadExp(int n)
+    {
+        GameManager.instance.GetExp(n);
     }
 }

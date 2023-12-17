@@ -44,13 +44,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void GetExp()
+    public void GetExp(int n)
     {
-        exp++;
+        exp = exp + n;
         if(exp >= nextExp[level])
         {
+            exp = exp - nextExp[level];
             level++;
-            exp = 0;
         }
     }
 }

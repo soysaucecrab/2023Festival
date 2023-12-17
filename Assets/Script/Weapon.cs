@@ -28,7 +28,6 @@ public class Weapon : MonoBehaviour
                 break;
             default:
                 timer += Time.deltaTime;
-                speed = 0.5f;
                 if (timer > speed)
                 {
                     timer = 0f;
@@ -48,6 +47,8 @@ public class Weapon : MonoBehaviour
         {
             Batch();
         }
+
+        player.BroadcastMessage("ApplyGear",SendMessageOptions.DontRequireReceiver);
     }
 
     public void Init(ItemData data)
@@ -79,9 +80,10 @@ public class Weapon : MonoBehaviour
                 Batch();
                 break;
             default:
-                speed = 0.5f;
+                speed = 0.7f;
                 break;
         }
+        player.BroadcastMessage("ApplyGear", SendMessageOptions.DontRequireReceiver);
     }
 
     void Batch()
