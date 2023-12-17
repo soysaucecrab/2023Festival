@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shoe 0
   m_EditorClassIdentifier: 
   itemType: 3
-  itemID: 0
+  itemID: 3
   itemName: "\uC804\uD22C \uC7A5\uD654"
   itemDesc: 
   itemIcon: {fileID: 1243064118, guid: df3e8a5fd1387ee42b106cab5ff248bb, type: 3}

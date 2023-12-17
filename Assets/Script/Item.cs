@@ -41,7 +41,7 @@ public class Item : MonoBehaviour
                 else
                 {
                     float nextDamage = data.baseDamage;
-                    int nextCount = data.baseCount;
+                    int nextCount = 0;
 
                     nextDamage += data.baseDamage * data.damages[level];
                     nextCount += data.counts[level];
@@ -51,9 +51,8 @@ public class Item : MonoBehaviour
                 break;
 
             case ItemData.ItemType.Glove:
-                break;
-
             case ItemData.ItemType.Shoe:
+
                 break;
 
             case ItemData.ItemType.Heal:
