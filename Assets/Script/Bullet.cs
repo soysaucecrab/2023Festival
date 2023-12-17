@@ -49,6 +49,9 @@ public class Bullet : MonoBehaviour
         per--;
         speed = speed * 0.9f;
         rigid.velocity = dir * speed;
+
+
+
         if (per < 0) {
             rigid.velocity = Vector2.zero;
             gameObject.SetActive(false);
