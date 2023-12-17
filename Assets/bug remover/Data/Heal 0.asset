@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b41856a3bafff04eb954977f2b5d478, type: 3}
+  m_Name: Heal 0
+  m_EditorClassIdentifier: 
+  itemType: 4
+  itemID: 0
+  itemName: "\uC704\uAC90\uC6F0\uB4DC \uB9C8\uBC95\uC57D"
+  itemDesc: 
+  itemIcon: {fileID: -867322196, guid: df3e8a5fd1387ee42b106cab5ff248bb, type: 3}
+  baseDamage: 0
+  baseCount: 0
+  damages:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  counts: 0000000000000000000000000000000000000000
+  projectile: {fileID: 0}

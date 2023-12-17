@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b41856a3bafff04eb954977f2b5d478, type: 3}
-  m_Name: Item 1
+  m_Name: Glove 0
   m_EditorClassIdentifier: 
   itemType: 1
   itemID: 0
-  itemName: "\uB9AC\uB355\uD1A0"
+  itemName: "\uC7A5\uAC11"
   itemDesc: 
-  itemIcon: {fileID: -1127834555, guid: fc123d1979abc2c4f951fab056707b07, type: 3}
-  baseDamage: 3
+  itemIcon: {fileID: -1845249892, guid: df3e8a5fd1387ee42b106cab5ff248bb, type: 3}
+  baseDamage: 0
   baseCount: 0
   damages:
+  - 0.1
+  - 0.2
   - 0.35
-  - 0.7
-  - 1
-  - 1.4
-  - 2
-  counts: 0100000001000000020000000200000004000000
-  projectile: {fileID: 4193727263064239352, guid: a53801a460c2bc243aae765030084d47, type: 3}
+  - 0.5
+  - 0.75
+  counts: 0000000000000000000000000000000000000000
+  projectile: {fileID: 0}

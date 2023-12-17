@@ -10,21 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b41856a3bafff04eb954977f2b5d478, type: 3}
-  m_Name: Item 0
+  m_Name: Shoe 0
   m_EditorClassIdentifier: 
-  itemType: 0
+  itemType: 3
   itemID: 0
-  itemName: "\uADF8\uB9AC\uD540\uB3C4\uB974\uC758 \uAC80"
+  itemName: "\uC804\uD22C \uC7A5\uD654"
   itemDesc: 
-  itemIcon: {fileID: 1611120064, guid: bd6a09a7435a58645bf69d968f13bd1a, type: 3}
-  baseDamage: 4.5
-  baseCount: 3
+  itemIcon: {fileID: 1243064118, guid: df3e8a5fd1387ee42b106cab5ff248bb, type: 3}
+  baseDamage: 0
+  baseCount: 0
   damages:
+  - 0.1
+  - 0.2
+  - 0.3
+  - 0.4
   - 0.5
-  - 1
-  - 1.5
-  - 2
-  - 2.5
-  - 3
-  counts: 0100000001000000010000000100000001000000
-  projectile: {fileID: 8704353983185700001, guid: b4bc6f9e2754fc947bad2a7c98583af9, type: 3}
+  counts: 0000000000000000000000000000000000000000
+  projectile: {fileID: 0}
