@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     [Header("#Game Object")]
     public PoolManager pool;
     public Player player;
+    public LevelUp uiLevelUp;
 
     public static GameManager instance;
 
@@ -31,6 +32,9 @@ public class GameManager : MonoBehaviour
     {
         maxHealth = 100;
         health = maxHealth;
+
+        //임시 스크립트
+        uiLevelUp.Select(0);
     }
 
     void Update()
@@ -51,6 +55,7 @@ public class GameManager : MonoBehaviour
         {
             exp = exp - nextExp[level];
             level++;
+            uiLevelUp.Show();
         }
     }
 }
