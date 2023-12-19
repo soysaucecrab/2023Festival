@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public int[] nextExp = {10,30,60,100,250,210,280,360,450,600 };
 
     [Header("#Game Control")]
+    public bool isLive;
     public float gameTime;
     public float maxGameTime = 2 * 10f;
 
@@ -39,9 +40,13 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if(!isLive)
+        {
+            return;
+        }
+
         gameTime += Time.deltaTime;
         
-
         if (gameTime > maxGameTime)
         {
             gameTime = maxGameTime;
@@ -51,11 +56,23 @@ public class GameManager : MonoBehaviour
     public void GetExp(int n)
     {
         exp = exp + n;
-        if(exp >= nextExp[level])
+        if(exp >= nextExp[Mathf.Min(level, nextExp.Length-1)])
         {
-            exp = exp - nextExp[level];
+            exp = exp - nextExp[Mathf.Min(level, nextExp.Length - 1)];
             level++;
             uiLevelUp.Show();
         }
+    }
+
+    public void Stop()
+    {
+        isLive = false;
+        Time.timeScale = 0;
+    }
+
+    public void Resume()
+    {
+        isLive = true;
+        Time.timeScale = 1;
     }
 }

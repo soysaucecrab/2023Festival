@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -26,7 +27,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!GameManager.instance.isLive)
+            return;
     }
 
     void OnMove(InputValue value)
@@ -36,12 +38,20 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!GameManager.instance.isLive)
+            return;
         Vector2 nextVec = inputVec * speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + nextVec);
     }
 
     void LateUpdate()
     {
+        if (!GameManager.instance.isLive)
+            return;
+        if (!GameManager.instance.isLive)
+        {
+            return;
+        }
         anim.SetFloat("Speed", inputVec.magnitude);
 
         if (inputVec.x != 0 )
