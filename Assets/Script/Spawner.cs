@@ -47,4 +47,6 @@ public class SpawnData
     public int health;
     public float speed;
 
+    [Header("¼Ó¼º°ª")]
+    public bool isMouse;
 }

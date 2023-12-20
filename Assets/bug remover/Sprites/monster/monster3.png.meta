@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ff7120ee6d2ace54893265fb028937ba
+guid: 72e9f2ba93253ac469242cb04ee86879
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BoomMouse_run0
+      name: monster3_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f21b27d9e6481645aafd977705c5634
-      internalID: 979254951
+      spriteID: 354bb1e8c7625474d81126d5dbcbdf6f
+      internalID: -1759159321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoomMouse_run1
+      name: monster3_1
       rect:
         serializedVersion: 2
         x: 32
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35e42925bd67f1e439c12b047963463f
-      internalID: 401426228
+      spriteID: 8beb61ee78208544a808383e55cbb6ad
+      internalID: 1338164304
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoomMouse_run2
+      name: monster3_2
       rect:
         serializedVersion: 2
         x: 64
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6634595a780ad704f8f7461ae031a9fd
-      internalID: 1295136220
+      spriteID: 9c95e6f36b85b2a47af118bcbdac7e90
+      internalID: -854519333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoomMouse_run3
+      name: monster3_3
       rect:
         serializedVersion: 2
         x: 96
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d611ca3d4f48224893f0e2ac30e0438
-      internalID: -1546839127
+      spriteID: a01ce39df169060498407a5744b3ccb0
+      internalID: 1582385780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoomMouse_angry0
+      name: monster3_hit_0
       rect:
         serializedVersion: 2
         x: 0
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec9278bfe0edb84458fd42623d6d6c65
-      internalID: 898772138
+      spriteID: ba02d352ca7296b43a5409083a8edbeb
+      internalID: -1887918057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoomMouse_angry1
+      name: monster3_hit_1
       rect:
         serializedVersion: 2
         x: 32
@@ -255,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b298b64707d3be847a9eca05a734ba28
-      internalID: -641663330
+      spriteID: 2791caba0318c394e83ba1101404cb68
+      internalID: -2105876147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoomMouse__angry2
+      name: monster3_hit_2
       rect:
         serializedVersion: 2
         x: 64
@@ -276,14 +276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d1d12b91234c634198e754da254d116
-      internalID: 724414682
+      spriteID: 005f3abbe20205d45abbff4c9edabe94
+      internalID: -1282152898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoomMouse_boom0
+      name: monster3_dead0
       rect:
         serializedVersion: 2
         x: 96
@@ -297,14 +297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f297f9cbab1f714b9065672b70dafc5
-      internalID: -1283679099
+      spriteID: 8fdac2a7f8862704a8d18ad2b3f425a6
+      internalID: 798774038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoomMouse_8
+      name: monster3_dead1
       rect:
         serializedVersion: 2
         x: 0
@@ -318,14 +318,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d88ee6467948da44182c3b666a4ee7f5
-      internalID: -1244005795
+      spriteID: 28172de71a542c44aa871b05e7b58930
+      internalID: 1990223663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoomMouse_9
+      name: monster3_dead2
       rect:
         serializedVersion: 2
         x: 32
@@ -339,14 +339,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 647984e4286ae374bb17d7638c1465cb
-      internalID: -798825549
+      spriteID: 88c4300fe6cf40d4b8391062c0127252
+      internalID: 360901645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoomMouse_10
+      name: monster3_dead3
       rect:
         serializedVersion: 2
         x: 64
@@ -360,14 +360,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee4640033811c504386d53c8bdad7335
-      internalID: 155656625
+      spriteID: bd9de3724d74a80438ca9280e59a8801
+      internalID: -2060991998
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoomMouse_11
+      name: monster3_dead4
       rect:
         serializedVersion: 2
         x: 96
@@ -381,14 +381,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1aae4df87f0a3a9458b9e0d3a9718f25
-      internalID: -1452452047
+      spriteID: 0b7a8ca141e98054d96016f9e6e1a37e
+      internalID: -2125008997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoomMouse_boom1
+      name: monster3_dead5
       rect:
         serializedVersion: 2
         x: 0
@@ -402,14 +402,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce3c7e72c7e49eb429243dd385f217b5
-      internalID: 94503602
+      spriteID: 49ab386873c031f4fab236012934bd1f
+      internalID: 1149053514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoomMouse_boom2
+      name: monster3_dead6
       rect:
         serializedVersion: 2
         x: 32
@@ -423,14 +423,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4023b705ebdc1ab4cb5a8403f1be1484
-      internalID: 1530078137
+      spriteID: 0face133039a91b45bede8281997c766
+      internalID: -37586912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoomMouse_boom3
+      name: monster3_dead7
       rect:
         serializedVersion: 2
         x: 64
@@ -444,8 +444,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a05dc7f4f5cc32142bc8a88b6e9e049c
-      internalID: -1727987991
+      spriteID: 2bab4f8978bce734cb28dc886a53bf91
+      internalID: -827959241
       vertices: []
       indices: 
       edges: []
@@ -461,21 +461,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BoomMouse_10: 155656625
-      BoomMouse_11: -1452452047
-      BoomMouse_8: -1244005795
-      BoomMouse_9: -798825549
-      BoomMouse__angry2: 724414682
-      BoomMouse_angry0: 898772138
-      BoomMouse_angry1: -641663330
-      BoomMouse_boom0: -1283679099
-      BoomMouse_boom1: 94503602
-      BoomMouse_boom2: 1530078137
-      BoomMouse_boom3: -1727987991
-      BoomMouse_run0: 979254951
-      BoomMouse_run1: 401426228
-      BoomMouse_run2: 1295136220
-      BoomMouse_run3: -1546839127
+      monster3_0: -1759159321
+      monster3_1: 1338164304
+      monster3_2: -854519333
+      monster3_3: 1582385780
+      monster3_dead0: 798774038
+      monster3_dead1: 1990223663
+      monster3_dead2: 360901645
+      monster3_dead3: -2060991998
+      monster3_dead4: -2125008997
+      monster3_dead5: 1149053514
+      monster3_dead6: -37586912
+      monster3_dead7: -827959241
+      monster3_hit_0: -1887918057
+      monster3_hit_1: -2105876147
+      monster3_hit_2: -1282152898
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

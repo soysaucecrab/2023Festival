@@ -192,6 +192,7 @@ MonoBehaviour:
   health: 0
   maxHealth: 0
   target: {fileID: 0}
+  isMouse: 0
 --- !u!114 &7143221189420278177
 MonoBehaviour:
   m_ObjectHideFlags: 0

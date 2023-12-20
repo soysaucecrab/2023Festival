@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public float health;
     public float maxHealth;
     public Rigidbody2D target;
+    public bool isMouse;
     bool hit;
 
     bool isLive;
@@ -68,6 +69,7 @@ public class Enemy : MonoBehaviour
         speed = data.speed;
         maxHealth = data.health;
         health = data.health;
+        isMouse = data.isMouse;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -89,7 +91,15 @@ public class Enemy : MonoBehaviour
             spriter.sortingOrder = 1;
             anim.SetBool("Dead", true);
             GameManager.instance.kill++;
-            
+
+            Vector3 myPos = transform.position;
+            Vector3 targetPos = target.transform.position;
+            float curDiff = Vector3.Distance(myPos, targetPos);
+
+            if (isMouse == true && curDiff<2)
+            {
+                GameManager.instance.health -= 20;
+            }
         }
     }
 
