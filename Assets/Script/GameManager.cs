@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [Header("#Player Information")]
-    public int health;
-    public int maxHealth;
+    public float health;
+    public float maxHealth;
     public int level;
     public int kill;
     public int exp;
@@ -21,6 +22,8 @@ public class GameManager : MonoBehaviour
     public PoolManager pool;
     public Player player;
     public LevelUp uiLevelUp;
+    public Result uiResult;
+    public Object enemyCleaner;
 
     public static GameManager instance;
 
@@ -29,13 +32,34 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
-    void Start()
+    public void GameStart()
     {
         maxHealth = 100;
         health = maxHealth;
 
         //임시 스크립트
         uiLevelUp.Select(0);
+
+        isLive= true;
+    }
+
+    public void GameOver()
+    {
+        StartCoroutine(GameOverRoutine());
+    }
+
+    IEnumerator GameOverRoutine()
+    {
+        isLive= false;
+        yield return new WaitForSeconds(0.5f);
+        uiResult.gameObject.SetActive(true);
+        uiResult.Lose();
+        Stop();
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(0);
     }
 
     void Update()
