@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    public bl_Joystick js;
+
     public Vector2 inputVec ;
     public float speed;
     public Scanner scanner;
@@ -29,6 +31,7 @@ public class Player : MonoBehaviour
     {
         if (!GameManager.instance.isLive)
             return;
+        inputVec = new Vector2(js.Horizontal, js.Vertical);
     }
 
     void OnMove(InputValue value)
