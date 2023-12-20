@@ -48,7 +48,6 @@ public class Enemy : MonoBehaviour
             return;
         if (!isLive)
             return;
-
         spriter.flipX = target.position.x < rigid.position.x;
     }
 
