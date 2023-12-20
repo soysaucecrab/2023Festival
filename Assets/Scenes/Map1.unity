@@ -395,15 +395,15 @@ MonoBehaviour:
   level: 0
   kill: 0
   exp: 0
-  nextExp: 01000000e8030000030000000400000005000000060000000700000008000000090000000a000000
+  nextExp: 0a0000000a00000014000000140000001e0000001e0000001e000000280000002800000032000000
   isLive: 0
   gameTime: 0
-  maxGameTime: 300
+  maxGameTime: 30
   pool: {fileID: 44070344}
   player: {fileID: 1903068305}
   uiLevelUp: {fileID: 589522455}
   uiResult: {fileID: 242240920}
-  enemyCleaner: {fileID: 0}
+  enemyCleaner: {fileID: 1185392577}
 --- !u!4 &73064163
 Transform:
   m_ObjectHideFlags: 0
@@ -882,9 +882,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2012200092}
-  - {fileID: 1657148046}
   - {fileID: 431902278}
+  - {fileID: 1657148046}
+  - {fileID: 2012200092}
   m_Father: {fileID: 842508031}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -22532,19 +22532,19 @@ MonoBehaviour:
   - spawnTime: 0.7
     spriteType: 0
     health: 10
-    speed: 1.5
+    speed: 2
     isMouse: 0
     isQu: 0
   - spawnTime: 0.5
     spriteType: 1
     health: 15
-    speed: 2.4
+    speed: 2.6
     isMouse: 0
     isQu: 0
   - spawnTime: 4
     spriteType: 2
     health: 20
-    speed: 2.6
+    speed: 3
     isMouse: 1
     isQu: 0
   - spawnTime: 6

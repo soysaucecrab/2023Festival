@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,7 +24,7 @@ public class GameManager : MonoBehaviour
     public Player player;
     public LevelUp uiLevelUp;
     public Result uiResult;
-    public Object enemyCleaner;
+    public GameObject enemyCleaner;
 
     public static GameManager instance;
 
@@ -39,8 +40,7 @@ public class GameManager : MonoBehaviour
 
         //임시 스크립트
         uiLevelUp.Select(0);
-
-        isLive= true;
+        Resume();
     }
 
     public void GameOver()
@@ -54,6 +54,21 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         uiResult.gameObject.SetActive(true);
         uiResult.Lose();
+        Stop();
+    }
+
+    public void Victory()
+    {
+        StartCoroutine(GameVictoryRoutine());
+    }
+
+    IEnumerator GameVictoryRoutine()
+    {
+        isLive = false;
+        enemyCleaner.SetActive(true );
+        yield return new WaitForSeconds(0.5f);
+        uiResult.gameObject.SetActive(true);
+        uiResult.Win();
         Stop();
     }
 
@@ -74,11 +89,14 @@ public class GameManager : MonoBehaviour
         if (gameTime > maxGameTime)
         {
             gameTime = maxGameTime;
+            Victory();
         }
     }
 
     public void GetExp(int n)
     {
+        if (!isLive)
+            return;
         exp = exp + n;
         if(exp >= nextExp[Mathf.Min(level, nextExp.Length-1)])
         {
