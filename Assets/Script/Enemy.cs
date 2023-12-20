@@ -96,9 +96,9 @@ public class Enemy : MonoBehaviour
             Vector3 targetPos = target.transform.position;
             float curDiff = Vector3.Distance(myPos, targetPos);
 
-            if (isMouse == true && curDiff<2)
+            if (isMouse == true && curDiff<1.5)
             {
-                GameManager.instance.health -= 20;
+                GameManager.instance.health -= 10;
             }
         }
     }
