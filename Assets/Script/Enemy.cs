@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class Enemy : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Enemy : MonoBehaviour
     public float maxHealth;
     public Rigidbody2D target;
     public bool isMouse;
+    public bool isQu;
     bool hit;
 
     bool isLive;
@@ -70,6 +72,7 @@ public class Enemy : MonoBehaviour
         maxHealth = data.health;
         health = data.health;
         isMouse = data.isMouse;
+        isQu = data.isQu;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -99,6 +102,11 @@ public class Enemy : MonoBehaviour
             if (isMouse == true && curDiff<1.5)
             {
                 GameManager.instance.health -= 10;
+            }
+            if (isQu == true)
+            {
+                GameManager.instance.exp += 10;
+                Debug.Log("sex");
             }
         }
     }

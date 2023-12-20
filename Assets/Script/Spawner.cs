@@ -7,34 +7,44 @@ public class Spawner : MonoBehaviour
 {
     public Transform[] spawnPoint;
     public SpawnData[] spawnData;
+    public float[] speedness;
 
-    float timer;
+    float[] timer;
     int level;
 
     void Awake()
     {
         spawnPoint = GetComponentsInChildren<Transform>();
+        timer = new float[spawnData.Length];
+        Debug.Log(spawnData.Length);
     }
     void Update()
     {
         if (!GameManager.instance.isLive)
             return;
 
-        timer += Time.deltaTime;
         level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / 10f), spawnData.Length-1);
 
-        if (timer > spawnData[level].spawnTime)
+        for (int i = 0; i <level+1;i++)
         {
-            timer = 0;
-            Spawn();
+            timer[i] += Time.deltaTime;
         }
+        for(int i = 0;i < level+1; i++)
+        {
+            if (timer[i] > spawnData[i].spawnTime * (speedness[Mathf.Min(speedness.Length, level)]))
+            {
+                timer[i] = 0;
+                Spawn(i);
+            }
+        }
+        
     }
 
-    void Spawn()
+    void Spawn(int num)
     {
         GameObject enemy = GameManager.instance.pool.Get(0); //range는 enemy 개수임
         enemy.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
-        enemy.GetComponent<Enemy>().Init(spawnData[Random.Range(0, level+1)]);
+        enemy.GetComponent<Enemy>().Init(spawnData[num]);
     }
 }
 
@@ -49,4 +59,5 @@ public class SpawnData
 
     [Header("속성값")]
     public bool isMouse;
+    public bool isQu;
 }

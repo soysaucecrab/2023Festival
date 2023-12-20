@@ -136,49 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: quidich_stand1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c49c2e8119e488643b77a851aa80c97d
-      internalID: -771811656
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: quidich_stand2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8dfd83051bc6c2a4597213aaaf3b7f6e
-      internalID: -2055216422
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: quidich_stand3
+      name: quidich_fly0
       rect:
         serializedVersion: 2
         x: 0
@@ -192,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84f9efe3e05dd444ca7b54b0dfad4431
-      internalID: -994635481
+      spriteID: b60d9742abd979741862b0f16f5116ee
+      internalID: -1300475674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: quidich_stand
+      name: quidich_fly1
       rect:
         serializedVersion: 2
         x: 32
@@ -213,8 +171,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76a4e3a5cc3e1e14fa8ecd7000b6d7f5
-      internalID: -532954412
+      spriteID: 9ee375beb08b090418e4d3a630efb195
+      internalID: 276112920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quidich_fly2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33d2012ff4fa2d49951c25f629fedf4
+      internalID: 653400272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quidich_fly3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea66d77904125d40a5fceb14a4cbd7e
+      internalID: 828639744
       vertices: []
       indices: 
       edges: []
@@ -234,8 +234,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 423a99a714ba8ec43a20436701ee5832
-      internalID: 1391421466
+      spriteID: 0c93e9d199f4abc45a47c9b4fb071b28
+      internalID: 373084063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quidich_dead0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0a4226824a6cb41b3364112e6a33f9
+      internalID: -529315965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quidich_dead1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc14b22cd98524498ce52da9bcecbd0
+      internalID: 1621651993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quidich_dead2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de1382f1ad41684d9a55a8cb94b1599
+      internalID: -1854785523
       vertices: []
       indices: 
       edges: []
@@ -251,11 +314,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      quidich_hit: 1391421466
-      quidich_stand: -532954412
-      quidich_stand1: -771811656
-      quidich_stand2: -2055216422
-      quidich_stand3: -994635481
+      quidich_dead0: -529315965
+      quidich_dead1: 1621651993
+      quidich_dead2: -1854785523
+      quidich_fly0: -1300475674
+      quidich_fly1: 276112920
+      quidich_fly2: 653400272
+      quidich_fly3: 828639744
+      quidich_hit: 373084063
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
