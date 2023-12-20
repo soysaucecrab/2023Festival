@@ -40,14 +40,13 @@ public class Player : MonoBehaviour
     {
         float x = joy.Horizontal;
         float y = joy.Vertical;
-        Debug.Log(x);
         Vector2 vec = new Vector2(x, y);
         vec.Normalize();
         if (!GameManager.instance.isLive)
             return;
         Vector2 nextVec = vec * speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + nextVec);
-
+        anim.SetFloat("Speed", vec.magnitude);
         //È¸Àü
         if (x != 0)
         {
@@ -57,13 +56,16 @@ public class Player : MonoBehaviour
 
     void LateUpdate()
     {
+        float x = joy.Horizontal;
+        float y = joy.Vertical;
+        Vector2 vec = new Vector2(x, y);
         if (!GameManager.instance.isLive)
             return;
         if (!GameManager.instance.isLive)
         {
             return;
         }
-        anim.SetFloat("Speed", inputVec.magnitude);
+        anim.SetFloat("Speed", vec.magnitude);
 
         if (inputVec.x != 0 )
         {
