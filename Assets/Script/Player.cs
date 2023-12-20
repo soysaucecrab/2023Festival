@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
         if (!GameManager.instance.isLive)
             return;
 
-        GameManager.instance.health -= Time.deltaTime * 50;
+        GameManager.instance.health -= Time.deltaTime * 30;
 
         if (GameManager.instance.health <= 0)
         {
