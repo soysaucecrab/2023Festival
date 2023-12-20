@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Gear : MonoBehaviour
@@ -59,7 +57,7 @@ public class Gear : MonoBehaviour
 
     void SpeedUp()
     {
-        float speed = 0.3f;
+        float speed = 3f;
         GameManager.instance.player.speed = speed + (speed * rate);
     }
 }

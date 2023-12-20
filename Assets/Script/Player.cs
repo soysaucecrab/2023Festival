@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    public bl_Joystick js;
+    public FixedJoystick joy;
 
     public Vector2 inputVec ;
     public float speed;
@@ -31,7 +28,7 @@ public class Player : MonoBehaviour
     {
         if (!GameManager.instance.isLive)
             return;
-        inputVec = new Vector2(js.Horizontal, js.Vertical);
+   //     inputVec = new Vector2(js.Horizontal, js.Vertical);
     }
 
     void OnMove(InputValue value)
@@ -41,10 +38,21 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        float x = joy.Horizontal;
+        float y = joy.Vertical;
+        Debug.Log(x);
+        Vector2 vec = new Vector2(x, y);
+        vec.Normalize();
         if (!GameManager.instance.isLive)
             return;
-        Vector2 nextVec = inputVec * speed * Time.fixedDeltaTime;
+        Vector2 nextVec = vec * speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + nextVec);
+
+        //È¸Àü
+        if (x != 0)
+        {
+            spriter.flipX = x < 0;
+        }
     }
 
     void LateUpdate()
